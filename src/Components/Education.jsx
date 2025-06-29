@@ -1,12 +1,12 @@
 import React from "react";
-import { FaUniversity, FaCertificate, FaAws } from "react-icons/fa";
+import { FaUniversity, FaCertificate } from "react-icons/fa";
 import {
   SiJavascript,
   SiReact,
   SiNodedotjs,
   SiMongodb,
-  SiTestinglibrary,
 } from "react-icons/si";
+import { motion } from "framer-motion";
 
 const Education = () => {
   return (
@@ -19,10 +19,11 @@ const Education = () => {
       </h2>
 
       <div className="max-w-4xl mx-auto space-y-10">
-        {/* University */}
-        <div
+        {/* University Card */}
+        <motion.div
+          whileHover={{ scale: 1.03, y: -5 }}
           data-aos="zoom-in-up"
-          className="bg-base-100/20 border border-base-300 rounded-3xl p-8 shadow-lg hover:shadow-primary transition-all duration-300 backdrop-blur"
+          className="bg-base-100/20 rounded-2xl p-6 shadow-lg shadow-purple-700/40 border-2 border-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 hover:shadow-purple-500/100  backdrop-blur-lg transition-all duration-300"
         >
           <div className="flex items-center gap-4 mb-6">
             <div className="text-primary text-4xl">
@@ -37,7 +38,7 @@ const Education = () => {
                 <span className="text-accent font-medium">
                   2023 - Present
                 </span>{" "}
-                | GPA: 3.8/4.0
+                | GPA: 3.9/4.0
               </p>
             </div>
           </div>
@@ -48,27 +49,13 @@ const Education = () => {
             software design, and problem solving. Courses include Data
             Structures, Algorithms, Web Dev, AI, and Cloud Computing.
           </p>
+        </motion.div>
 
-          <div className="flex flex-wrap justify-center gap-3 mt-6">
-            <span className="badge bg-base-200 border border-yellow-500 text-yellow-300 gap-2">
-              <SiJavascript /> JavaScript
-            </span>
-            <span className="badge bg-base-200 border border-sky-500 text-sky-300 gap-2">
-              <SiReact /> React
-            </span>
-            <span className="badge bg-base-200 border border-lime-500 text-lime-300 gap-2">
-              <SiNodedotjs /> Node.js
-            </span>
-            <span className="badge bg-base-200 border border-emerald-500 text-emerald-300 gap-2">
-              <SiMongodb /> MongoDB
-            </span>
-          </div>
-        </div>
-
-        {/* Certifications */}
-        <div
+        {/* Certifications Card */}
+        <motion.div
+          whileHover={{ scale: 1.03, y: -5 }}
           data-aos="zoom-in-up"
-          className="bg-base-100/20 border border-base-300 rounded-3xl p-8 shadow-lg hover:shadow-primary transition-all duration-300 backdrop-blur"
+          className="bg-base-100/20 rounded-2xl p-6 shadow-lg border-2 border-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 hover:shadow-purple-500/100 shadow-purple-700/40 backdrop-blur-lg transition-all duration-300"
         >
           <div className="flex items-center gap-4 mb-6">
             <div className="text-primary text-3xl">
@@ -96,17 +83,15 @@ const Education = () => {
                 AWS Cloud Practitioner
               </span>{" "}
               – Amazon, 2024
-              
             </li>
             <li>
               <span className="text-purple-400 font-semibold">
                 React Advanced Concepts
               </span>{" "}
               – Frontend Masters, 2023
-              
             </li>
           </ul>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

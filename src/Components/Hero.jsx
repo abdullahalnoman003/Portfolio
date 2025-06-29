@@ -22,7 +22,6 @@ const Hero = () => {
 
         {/* Text Content */}
         <div className="text-center lg:text-left">
-          
           <h1 className="text-4xl md:text-5xl font-bold text-primary">
             Hi!👋 I'm Abdullah Al Noman{" "}
           </h1>
@@ -53,7 +52,8 @@ const Hero = () => {
           {/* Buttons and Socials */}
           <div className="flex flex-col md:flex-row gap-4 items-center mt-6">
             <a
-              href="/resume.pdf" // Add your resume link
+              href="/resume.pdf"
+              download="Abdullah-Al-Noman-Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary"

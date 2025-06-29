@@ -38,13 +38,13 @@ const Projects = () => {
         <p className="text-lg text-gray-400">Showcasing some of my recent work</p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-10">
+      <div className="grid md:grid-cols-2 gap-10 ">
         {projects.map((project, index) => (
           <motion.div
             key={index}
             whileHover={{ scale: 1.02 }}
             data-aos="zoom-in-up"
-            className="rounded-2xl overflow-hidden shadow-lg border border-base-300 bg-base-200 hover:shadow-purple-500/100 shadow-purple-500/40 transform transition"
+            className="border-2 border-gradient-to-r from-purple-600 via-pink-600 to-indigo-600  rounded-2xl  overflow-hidden shadow-lg   bg-base-200 hover:shadow-purple-500/100 shadow-purple-500/40 transform transition"
           >
             <Carousel
               showThumbs={false}
@@ -73,7 +73,7 @@ const Projects = () => {
                 {project.tech.map((tech, idx) => (
                   <span
                     key={idx}
-                    className="px-3 py-1 text-xs rounded-full bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500 text-white font-medium shadow-md"
+                    className="px-3  py-1 text-xs rounded-full bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500 text-white font-medium shadow-md"
                   >
                     {tech}
                   </span>

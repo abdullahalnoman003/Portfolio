@@ -73,7 +73,7 @@ const Skill = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: j * 0.05 }}
-                  className="w-32 h-32 bg-white/5 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-pink-500/40 flex flex-col items-center justify-center text-center p-4 transition-all duration-300 border border-white/10"
+                  className="w-32 h-32  bg-white/5 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-pink-500/40 flex flex-col items-center justify-center text-center p-4 transition-all duration-300 border border-white/10"
                 >
                   <div className={`text-4xl mb-2 ${skill.color}`}>{skill.icon}</div>
                   <p className="text-sm font-medium text-gray-200">{skill.name}</p>

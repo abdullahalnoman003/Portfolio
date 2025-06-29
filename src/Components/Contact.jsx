@@ -1,8 +1,9 @@
-// components/Contact.js
 import React, { useRef } from "react";
 import emailjs from "emailjs-com";
 import Swal from "sweetalert2";
 import { motion } from "framer-motion";
+import { FaWhatsappSquare } from "react-icons/fa";
+import { FaPhone } from "react-icons/fa";
 
 const Contact = () => {
   const form = useRef();
@@ -11,10 +12,10 @@ const Contact = () => {
     e.preventDefault();
     emailjs
       .sendForm(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         form.current,
-        "YOUR_PUBLIC_KEY"
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(() => {
         Swal.fire("Message Sent!", "I will get back to you soon!", "success");
@@ -26,109 +27,133 @@ const Contact = () => {
   };
 
   return (
-    <section
-      id="contact"
-      className="py-20 px-6 text-white"
-    >
+    <section id="contact" className="py-20 px-4 text-white relative">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-primary bg-clip-text animate-pulse">
+        {/* Animated Gradient Title */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, ease: "easeInOut" }}
+          className="text-center mb-16"
+        >
+          <h2
+            className="text-5xl font-extrabold tracking-wider  bg-clip-text text-primary drop-shadow-lg animate-gradient-x"
+            style={{ backgroundSize: "200% 100%" }}
+          >
             🤝 Get In Touch
           </h2>
-          <p className="text-accent mt-2">
-            Feel free to reach out! I'd love to collaborate.
+          <p className="text-gray-400 mt-3 text-lg italic tracking-wide">
+            Let’s connect and build something amazing together!
           </p>
-        </div>
+        </motion.div>
 
+        {/* Content Grid */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.7 }}
           className="grid grid-cols-1 lg:grid-cols-2 gap-12"
         >
-          {/* Contact Info */}
-          <div className="bg-[#0f172a] rounded-xl p-8 shadow-xl border border-[#334155]">
-            <h3 className="text-2xl font-semibold mb-6 text-indigo-400">Contact Information</h3>
-            <ul className="space-y-6 text-gray-300">
+          {/* Contact Info Box */}
+          <div className="rounded-xl p-8 border-2 border-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 shadow-[0_0_20px_rgba(147,51,234,0.7)] bg-black bg-opacity-30 backdrop-blur-md hover:shadow-[0_0_30px_rgba(147,51,234,1)] transition-shadow duration-500">
+            <h3 className="text-3xl font-semibold text-white mb-6 tracking-wide">
+              Contact Info
+            </h3>
+            <ul className="space-y-6 text-gray-300 text-lg">
               <li className="flex items-center gap-4">
-                📧
-                <a href="mailto:youremail@example.com" className="hover:text-indigo-400">
-                  youremail@example.com
+                😊{" "}
+                <a className="hover:text-purple-400 transition">
+                  Abdullah Al Noman
                 </a>
               </li>
               <li className="flex items-center gap-4">
-                📞
-                <a href="tel:+1234567890" className="hover:text-indigo-400">
-                  +1 (234) 567-890
+                📧{" "}
+                <a
+                  href="mailto:noman22622@gmail.com"
+                  className="hover:text-blue-400 transition"
+                >
+                  noman22622@gmail.com
                 </a>
               </li>
               <li className="flex items-center gap-4">
-                📍<span>Dhaka, Bangladesh</span>
+                <FaPhone className="text-red-400" />
+                <FaWhatsappSquare className="text-green-400" />{" "}
+                <a
+                  href="https://wa.me/+8801522102892"
+                  className="hover:text-green-400 transition"
+                >
+                  +8801522102892
+                </a>
               </li>
+              <li className="flex items-center gap-4">📍 Dhaka, Bangladesh</li>
             </ul>
-            <div className="mt-8 flex gap-4">
+            <div className="mt-8 flex gap-8 text-3xl text-gray-300">
               <a
                 href="https://github.com/yourusername"
+                className="hover:text-purple-400 transition"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-2xl hover:text-indigo-400"
               >
                 <i className="fab fa-github"></i>
               </a>
               <a
                 href="https://linkedin.com/in/yourprofile"
+                className="hover:text-purple-400 transition"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-2xl hover:text-indigo-400"
               >
                 <i className="fab fa-linkedin"></i>
               </a>
               <a
                 href="https://twitter.com/yourhandle"
+                className="hover:text-purple-400 transition"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-2xl hover:text-indigo-400"
               >
                 <i className="fab fa-twitter"></i>
               </a>
             </div>
           </div>
 
-          {/* Contact Form */}
+          {/* Contact Form Box */}
           <form
             ref={form}
             onSubmit={sendEmail}
-            className="bg-[#0f172a] rounded-xl p-8 shadow-xl border border-[#334155]"
+            className="relative rounded-xl p-8 border-2 border-gradient-to-r from-indigo-600 via-pink-600 to-purple-600 shadow-[0_0_20px_rgba(131,58,180,0.7)] bg-black bg-opacity-30 backdrop-blur-md hover:shadow-[0_0_30px_rgba(131,58,180,1)] transition-shadow duration-500"
           >
-            <h3 className="text-2xl font-semibold mb-6 text-indigo-400">Send a Message</h3>
-            <div className="space-y-4">
+            <h3 className="text-3xl font-semibold text-white mb-6 tracking-wide">
+              Send a Message
+            </h3>
+            <div className="space-y-5">
               <input
                 name="name"
                 type="text"
                 placeholder="Your Name"
-                className="w-full px-4 py-3 rounded-lg bg-[#1e293b] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full bg-[#1e293b] text-white p-4 rounded-md placeholder-gray-400 focus:ring-2 focus:ring-purple-500 focus:outline-none transition"
                 required
               />
               <input
                 name="email"
                 type="email"
                 placeholder="Your Email"
-                className="w-full px-4 py-3 rounded-lg bg-[#1e293b] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full bg-[#1e293b] text-white p-4 rounded-md placeholder-gray-400 focus:ring-2 focus:ring-purple-500 focus:outline-none transition"
                 required
               />
               <textarea
                 name="message"
                 rows="5"
                 placeholder="Your Message"
-                className="w-full px-4 py-3 rounded-lg bg-[#1e293b] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full bg-[#1e293b] text-white p-4 rounded-md placeholder-gray-400 focus:ring-2 focus:ring-purple-500 focus:outline-none transition resize-none"
                 required
               ></textarea>
-              <button
+              <motion.button
+                whileHover={{ scale: 1.05, boxShadow: "0 0 15px #c084fc" }}
+                whileTap={{ scale: 0.95 }}
                 type="submit"
-                className="w-full py-3 mt-2 bg-indigo-600 hover:bg-indigo-700 rounded-lg text-white font-semibold transition duration-300"
+                className="w-full bg-primary text-white py-4 font-semibold rounded-md transition shadow-lg"
               >
                 Send Message 🚀
-              </button>
+              </motion.button>
             </div>
           </form>
         </motion.div>
