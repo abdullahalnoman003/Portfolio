@@ -76,19 +76,19 @@ const Education = () => {
               <span className="text-sky-400 font-semibold">
                 Full Stack Web Development
               </span>{" "}
-              – Programming Hero - Batch 11
+              – Programming Hero - 2025
             </li>
             <li>
               <span className="text-orange-400 font-semibold">
-                AWS Cloud Practitioner
+                AI Prompt Engineering - 
               </span>{" "}
-              – Amazon, 2024
+              – AICerts, 2025
             </li>
             <li>
               <span className="text-purple-400 font-semibold">
-                React Advanced Concepts
+                Introduction To Git
               </span>{" "}
-              – Frontend Masters, 2023
+              – Microsoft, 2024
             </li>
           </ul>
         </motion.div>

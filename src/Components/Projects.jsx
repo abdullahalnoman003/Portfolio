@@ -6,26 +6,15 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const projects = [
   {
-    title: 'CaseCloud',
-    description: 'Legal Case & Document Organizer built with MERN Stack. Role-based access, secure authentication, and document handling.',
-    tech: ['MongoDB', 'Express.js', 'React', 'Node.js'],
-    github: 'https://github.com/yourUsername/casecloud',
-    live: 'https://casecloud-demo.vercel.app',
-    images: [
-      '/assets/casecloud1.png',
-      '/assets/casecloud2.png',
-      '/assets/casecloud3.png',
-    ],
-  },
-  {
     title: 'Food Khazana',
     description: 'Recipe book app with likes, wishlists, and top recipes — user-friendly and dynamic UI.',
-    tech: ['React', 'Firebase', 'Tailwind'],
-    github: 'https://github.com/yourUsername/food-khazana',
-    live: 'https://foodkhazana-demo.netlify.app',
+    tech: ['React', 'Firebase', 'JavaScript','NodeJS','ExpressJS'],
+    github: 'https://github.com/abdullahalnoman003/Food-Khazana',
+    live: 'https://food-khazana.netlify.app/',
     images: [
-      '/assets/foodkhazana1.png',
-      '/assets/foodkhazana2.png',
+      'https://i.ibb.co/M5cRG4RP/image.png',
+      'https://i.ibb.co/jkxBgdSN/image.png',
+      'https://i.ibb.co/gbyRtt9M/image.png',
     ],
   },
 ];
@@ -59,7 +48,7 @@ const Projects = () => {
                   <img
                     src={img}
                     alt={`${project.title} screenshot ${i + 1}`}
-                    className="object-cover h-64 w-full"
+                    className="object-cover h-fit w-fit"
                   />
                 </div>
               ))}
@@ -85,7 +74,7 @@ const Projects = () => {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-2xl text-base-content hover:text-primary transition-all"
+                  className="text-2xl text-base-content hover:text-primary transition-all "
                 >
                   <FaGithub />
                 </a>
@@ -95,7 +84,7 @@ const Projects = () => {
                   rel="noopener noreferrer"
                   className="text-2xl text-base-content hover:text-primary transition-all"
                 >
-                  <FaExternalLinkAlt />
+                <FaExternalLinkAlt />
                 </a>
               </div>
             </div>

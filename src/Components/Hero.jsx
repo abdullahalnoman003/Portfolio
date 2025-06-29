@@ -74,28 +74,28 @@ const Hero = () => {
           {/* Social Links */}
           <div className="flex gap-6 text-2xl mt-6 justify-center lg:justify-start">
             <a
-              href="https://github.com/your-github"
+              href="https://github.com/abdullahalnoman003"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaGithub className="hover:text-primary duration-200" />
             </a>
             <a
-              href="https://linkedin.com/in/your-linkedin"
+              href="https://linkedin.com/in/abdullahalnoman003"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaLinkedin className="hover:text-primary duration-200" />
             </a>
             <a
-              href="https://facebook.com/your-facebook"
+              href="https://facebook.com/fb.abdullahalnoman"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaFacebook className="hover:text-primary duration-200" />
             </a>
             <a
-              href="https://twitter.com/your-twitter"
+              href="https://x.com/Noman_1003"
               target="_blank"
               rel="noopener noreferrer"
             >

@@ -80,6 +80,7 @@ const Contact = () => {
                 <FaWhatsappSquare className="text-green-400" />{" "}
                 <a
                   href="https://wa.me/+8801522102892"
+                  target="_blank"
                   className="hover:text-green-400 transition"
                 >
                   +8801522102892
