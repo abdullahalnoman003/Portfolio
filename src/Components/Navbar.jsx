@@ -61,9 +61,13 @@ const Navbar = () => {
           duration={500}
           className="btn max-lg:pl-0 bg-transparent shadow-none border-0 text-2xl max-lg:text-xl font-bold lg:ml-4"
         >
-          {" "}
-          <span className="text-primary">Noman</span>
-          <span>Dev</span>{" "}
+          <div className="flex justify-center gap-1 items-center">
+            <img className="h-7 w-7" src="/image.png" alt="logo" />{" "}
+            <div>
+              <span className="text-primary">Noman</span>{" "}
+              <span>Dev</span>
+            </div>
+          </div>
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
