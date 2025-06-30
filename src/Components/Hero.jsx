@@ -12,15 +12,12 @@ const Hero = () => {
   return (
     <div className="hero min-h-screen px-4 md:px-20">
       <div className="hero-content flex-col lg:flex-row-reverse gap-10">
-        {/* Profile Picture */}
         <img
           data-aos="zoom-in-up"
           src="images/photo.png"
           className="max-w-xs rounded-full shadow-2xl border-4 border-primary shadow-purple-500/100  "
           alt="Profile"
         />
-
-        {/* Text Content */}
         <div className="text-center lg:text-left">
           <h1 className="text-4xl md:text-5xl font-bold text-primary">
             Hi!👋 I'm Abdullah Al Noman{" "}
@@ -48,8 +45,6 @@ const Hero = () => {
             React, Node.js, and MongoDB. Currently exploring DevOps and building
             beautiful UIs with Tailwind and DaisyUI.
           </p>
-
-          {/* Buttons and Socials */}
           <div className="flex flex-col md:flex-row gap-4 items-center mt-6">
             <a
               href="/resume.pdf"
@@ -70,8 +65,6 @@ const Hero = () => {
               Contact Me
             </Link>
           </div>
-
-          {/* Social Links */}
           <div className="flex gap-6 text-2xl mt-6 justify-center lg:justify-start">
             <a
               href="https://github.com/abdullahalnoman003"

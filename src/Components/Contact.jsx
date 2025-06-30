@@ -18,18 +18,43 @@ const Contact = () => {
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(() => {
-        Swal.fire("Message Sent!", "I will get back to you soon!", "success");
+        Swal.fire({
+          title: "Message Sent",
+          text: "Thank you! I’ll get back to you shortly.",
+          icon: "success",
+          background: "#121212", 
+          color: "#f0e7d8", 
+          iconColor: "#f97316", 
+          confirmButtonColor: "#f97316", 
+          customClass: {
+            popup: "rounded-md shadow-lg border border-orange-600",
+            title: "text-lg font-semibold",
+            confirmButton: "px-4 py-2 text-sm font-medium",
+          },
+        });
         form.current.reset();
       })
       .catch(() => {
-        Swal.fire("Error!", "Something went wrong. Please try again.", "error");
+        Swal.fire({
+          title: "Error",
+          text: "Something went wrong. Please try again.",
+          icon: "error",
+          background: "#121212",
+          color: "#f0e7d8",
+          iconColor: "#ef4444", 
+          confirmButtonColor: "#ef4444",
+          customClass: {
+            popup: "rounded-md shadow-lg border border-red-600",
+            title: "text-lg font-semibold",
+            confirmButton: "px-4 py-2 text-sm font-medium",
+          },
+        });
       });
   };
 
   return (
     <section id="contact" className="py-20 px-4 text-white relative">
       <div className="max-w-6xl mx-auto">
-        {/* Animated Gradient Title */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -46,15 +71,12 @@ const Contact = () => {
             Let’s connect and build something amazing together!
           </p>
         </motion.div>
-
-        {/* Content Grid */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           className="grid grid-cols-1 lg:grid-cols-2 gap-12"
         >
-          {/* Contact Info Box */}
           <div className="rounded-xl p-8 border-2 border-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 shadow-[0_0_20px_rgba(147,51,234,0.7)] bg-black bg-opacity-30 backdrop-blur-md hover:shadow-[0_0_30px_rgba(147,51,234,1)] transition-shadow duration-500">
             <h3 className="text-3xl font-semibold text-white mb-6 tracking-wide">
               Contact Info
@@ -115,8 +137,6 @@ const Contact = () => {
               </a>
             </div>
           </div>
-
-          {/* Contact Form Box */}
           <form
             ref={form}
             onSubmit={sendEmail}

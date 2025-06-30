@@ -9,7 +9,7 @@ import Projects from '../Components/Projects';
 import Contact from '../Components/Contact';
 const Home = () => {
     return (
-        <div className="bg-gradient-to-br space-font from-[#0f0c29] via-[#302b63] to-[#24243e] min-h-screen text-white">
+        <div className="space-font min-h-screen w-full text-white bg-[linear-gradient(135deg,#0f0c29,#302b63,#24243e)] bg-[length:300%_300%] animate-[moveDiagonal_25s_linear_infinite]">
         <nav><Navbar></Navbar></nav>
         <main className='max-lg:mt-15'>
             <div id="hero"><Hero /></div>

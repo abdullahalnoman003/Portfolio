@@ -1,15 +1,30 @@
 import React from "react";
 import {
-  FaReact,
-  FaNodeJs,
   FaHtml5,
   FaCss3Alt,
   FaJsSquare,
+  FaReact,
+  FaBootstrap,
   FaGitAlt,
   FaGithub,
-  FaBootstrap,
+  FaFigma,
+  FaNpm,
+  FaNodeJs,
 } from "react-icons/fa";
-import { SiMongodb, SiExpress } from "react-icons/si";
+
+import {
+  SiExpress,
+  SiMongodb,
+  SiTailwindcss,
+  SiFirebase,
+  SiRedux,
+  SiTypescript,
+  SiJsonwebtokens,
+  SiPostman,
+  SiDaisyui,
+  SiVercel,
+  SiNetlify,
+} from "react-icons/si";
 import { motion } from "framer-motion";
 
 const skills = [
@@ -19,8 +34,12 @@ const skills = [
       { name: "HTML5", icon: <FaHtml5 />, color: "text-orange-400" },
       { name: "CSS3", icon: <FaCss3Alt />, color: "text-blue-400" },
       { name: "JavaScript", icon: <FaJsSquare />, color: "text-yellow-400" },
+      // { name: "TypeScript", icon: <SiTypescript />, color: "text-blue-500" },
       { name: "React", icon: <FaReact />, color: "text-cyan-400" },
+      { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "text-sky-400" },
       { name: "Bootstrap", icon: <FaBootstrap />, color: "text-purple-400" },
+      { name: "DaisyUI", icon: <SiDaisyui />, color: "text-pink-400" },
+      // { name: "Redux", icon: <SiRedux />, color: "text-purple-500" },
     ],
   },
   {
@@ -29,6 +48,9 @@ const skills = [
       { name: "Node.js", icon: <FaNodeJs />, color: "text-green-400" },
       { name: "Express.js", icon: <SiExpress />, color: "text-gray-300" },
       { name: "MongoDB", icon: <SiMongodb />, color: "text-emerald-400" },
+      { name: "Firebase", icon: <SiFirebase />, color: "text-yellow-400" },
+      { name: "JWT", icon: <SiJsonwebtokens />, color: "text-red-500" },
+      // { name: "REST API", icon: <SiPostman />, color: "text-orange-500" },
     ],
   },
   {
@@ -36,6 +58,11 @@ const skills = [
     items: [
       { name: "Git", icon: <FaGitAlt />, color: "text-red-400" },
       { name: "GitHub", icon: <FaGithub />, color: "text-white" },
+      { name: "Figma", icon: <FaFigma />, color: "text-pink-500" },
+      { name: "Postman", icon: <SiPostman />, color: "text-orange-500" },
+      { name: "Vercel", icon: <SiVercel />, color: "text-white" },
+      { name: "Netlify", icon: <SiNetlify />, color: "text-teal-400" },
+      { name: "NPM", icon: <FaNpm />, color: "text-red-500" },
     ],
   },
 ];
@@ -75,8 +102,12 @@ const Skill = () => {
                   transition={{ delay: j * 0.05 }}
                   className="w-32 h-32  bg-white/5 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-pink-500/40 flex flex-col items-center justify-center text-center p-4 transition-all duration-300 border border-white/10"
                 >
-                  <div className={`text-4xl mb-2 ${skill.color}`}>{skill.icon}</div>
-                  <p className="text-sm font-medium text-gray-200">{skill.name}</p>
+                  <div className={`text-4xl mb-2 ${skill.color}`}>
+                    {skill.icon}
+                  </div>
+                  <p className="text-sm font-medium text-gray-200">
+                    {skill.name}
+                  </p>
                 </motion.div>
               ))}
             </div>
