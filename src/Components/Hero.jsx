@@ -15,21 +15,21 @@ const Hero = () => {
         <img
           data-aos="zoom-in-up"
           src="images/photo.png"
-          className="max-w-xs rounded-full shadow-2xl border-4 border-primary shadow-purple-500/100  "
+          className="max-w-xs rounded-full shadow-2xl border-4 border-primary shadow-purple-500/100 max-md:w-3/4 "
           alt="Profile"
         />
         <div className="text-center lg:text-left">
           <h1 className="text-4xl md:text-5xl font-bold text-primary">
             Hi!👋 I'm Abdullah Al Noman{" "}
           </h1>
-          <h1 className="text-2xl md:text-3xl font-semibold mt-2">
+          <h1 className="text-2xl md:text-3xl font-semibold mt-2 h-15">
             I am a{" "}
             <span className="text-primary">
               <Typewriter
                 words={[
-                  "Web Developer",
-                  "React Developer",
-                  "MERN Stack Developer",
+                  "Web Developer!",
+                  "React Developer!",
+                  "MERN Stack Developer!",
                 ]}
                 loop={true}
                 cursor
