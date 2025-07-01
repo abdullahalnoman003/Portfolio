@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="bg-[#0f172a] text-gray-300 py-10 px-4">
       <div className="max-w-6xl mx-auto text-center">
-        <nav className="flex flex-wrap justify-center gap-6 mb-4 text-sm font-medium tracking-wide">
+        <nav className="flex  flex-wrap justify-center gap-6 mb-6 text-sm font-medium tracking-wide">
           <Link
             to="about"
             smooth
@@ -55,13 +55,13 @@ const Footer = () => {
             href="https://linkedin.com/in/abdullahalnoman003"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-white transition"
+            className="hover:text-blue-400 transition"
           >
             <FaLinkedin />
           </a>
           <a
             href="mailto:noman22622@gmail.com"
-            className="hover:text-white transition"
+            className="hover:text-red-400 transition"
           >
             <FaEnvelope />
           </a>

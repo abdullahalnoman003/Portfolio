@@ -11,7 +11,7 @@ const Home = () => {
     return (
         <div className="space-font min-h-screen w-full text-white bg-[linear-gradient(135deg,#0f0c29,#302b63,#24243e)] bg-[length:300%_300%] animate-[moveDiagonal_25s_linear_infinite]">
         <nav><Navbar></Navbar></nav>
-        <main className='max-lg:mt-15'>
+        <main className='max-lg:pt-15'>
             <div id="hero"><Hero /></div>
             <div id="about"><About /></div>
             <div id="skills"><Skill /></div>

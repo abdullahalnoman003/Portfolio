@@ -10,7 +10,7 @@ import { Link } from "react-scroll";
 import { Typewriter } from "react-simple-typewriter";
 const Hero = () => {
   return (
-    <div className="hero min-h-screen px-4 md:px-20">
+    <div className="hero min-h-screen  px-4 md:px-20">
       <div className="hero-content flex-col lg:flex-row-reverse gap-10">
         <img
           data-aos="zoom-in-up"
@@ -60,7 +60,7 @@ const Hero = () => {
               to="contact"
               smooth={true}
               duration={500}
-              className="btn btn-outline btn-secondary cursor-pointer"
+              className="btn btn-outline btn-accent hover:text-white cursor-pointer"
             >
               Contact Me
             </Link>

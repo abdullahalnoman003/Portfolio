@@ -70,26 +70,22 @@ const skills = [
 const Skill = () => {
   return (
     <section id="skills" className="py-20 px-6 md:px-24 text-white">
-      <motion.h2
+      <h2
+      data-aos="zoom-in"
         className="text-4xl font-extrabold text-center mb-16 text-primary"
-        initial={{ opacity: 0, y: -30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
       >
         🚀 My Tech Stack
-      </motion.h2>
+      </h2>
 
       <div className="flex flex-col gap-20">
         {skills.map((group, i) => (
           <div key={i}>
-            <motion.h3
+            <h3
+            data-aos="flip-right"
               className="text-2xl font-bold text-center text-gray-300 mb-10"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ delay: 0.2 }}
             >
               {group.category}
-            </motion.h3>
+            </h3>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 justify-items-center">
               {group.items.map((skill, j) => (

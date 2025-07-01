@@ -14,8 +14,7 @@ const Education = () => {
       id="education"
       className="py-20 px-6 lg:px-24 text-neutral-content"
     >
-      <h2 className="text-4xl md:text-5xl font-black text-center mb-16 tracking-tight">
-        <span className="text-primary">Education & Certifications</span>
+      <h2 data-aos="zoom-in"  className="text-4xl md:text-5xl text-primary font-bold text-center mb-16">Education & Certifications
       </h2>
 
       <div className="max-w-4xl mx-auto space-y-10">
@@ -23,7 +22,7 @@ const Education = () => {
         <motion.div
           whileHover={{ scale: 1.03, y: -5 }}
           data-aos="zoom-in-up"
-          className="bg-base-100/20 rounded-2xl p-6 shadow-lg shadow-purple-700/40 border-2 border-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 hover:shadow-purple-500/100  backdrop-blur-lg transition-all duration-300"
+          className="bg-base-100/20 rounded-2xl p-6 shadow-lg shadow-purple-700/40 border-2 hover:shadow-purple-500/100  backdrop-blur-lg transition-all duration-300"
         >
           <div className="flex items-center gap-4 mb-6">
             <div className="text-primary text-4xl">
@@ -55,7 +54,7 @@ const Education = () => {
         <motion.div
           whileHover={{ scale: 1.03, y: -5 }}
           data-aos="zoom-in-up"
-          className="bg-base-100/20 rounded-2xl p-6 shadow-lg border-2 border-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 hover:shadow-purple-500/100 shadow-purple-700/40 backdrop-blur-lg transition-all duration-300"
+          className="bg-base-100/20 rounded-2xl p-6 shadow-lg border-2 hover:shadow-purple-500/100 shadow-purple-700/40 backdrop-blur-lg transition-all duration-300"
         >
           <div className="flex items-center gap-4 mb-6">
             <div className="text-primary text-3xl">

@@ -3,6 +3,7 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Typewriter } from "react-simple-typewriter";
 
 const projects = [
   {
@@ -64,9 +65,19 @@ const Projects = () => {
   return (
     <section id="projects" className="py-20 px-6 lg:px-24 text-base-content">
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold mb-2 text-primary">🚀 My Projects</h2>
+        <h2 
+        data-aos="fade-out"
+        className="text-4xl font-bold mb-2 text-primary">🚀 My Projects</h2>
         <p className="text-lg text-gray-400">
-          Showcasing some of my recent work
+          
+          <Typewriter
+                          words={[
+                            "Showcasing some of my recent work"
+                          ]}
+                          cursor
+                          cursorStyle="_"
+                          typeSpeed={70}
+                        />
         </p>
       </div>
 
